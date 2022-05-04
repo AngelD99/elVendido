@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo puntoventa.ventas -->	
+		<record model="ir.ui.view" id="ventas_form">
+		<field name="name">puntoventa.ventas.form</field>
+		<field name="model">puntoventa.ventas</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<form>
+            <sheet>
+                <group string="Datos de ventas">
+                    <field name="name" placeholder="Número de control" />
+                </group>
+            </sheet>
+		</form>
+        </field>
+		</record>
+
+        <!-- vista tipo tree del modelo puntoventa.ventas -->	
+		<record model="ir.ui.view" id="puntoventa_ventas_tree">
+			<field name="name">puntoventa.ventas.tree</field>
+			<field name="model">puntoventa.ventas</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="ventas" >
+						<field name="name" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="puntoventa_ventas_search">
+			<field name="name">puntoventa.ventas.search</field>
+			<field name="model">puntoventa.ventas</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO puntoventa.ventas -->	
+		<record id="puntoventa_ventas_action" model="ir.actions.act_window">
+			<field name="name">ventas</field>
+			<field name="res_model">puntoventa.ventas</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+	<report id="kardex_id" model="puntoventa.ventas"
+		string="Kardex" report_type="qweb-pdf" name="puntoventa.kardex"
+		attachment_use="False"/> 
+
+</odoo>

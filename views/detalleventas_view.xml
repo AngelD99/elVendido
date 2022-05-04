@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo puntoventa.detalleventa -->	
+		<record model="ir.ui.view" id="detalleventa_form">
+		<field name="name">puntoventa.detalleventa.form</field>
+		<field name="model">puntoventa.detalleventa</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<form>
+            <sheet>
+                <group string="Datos de detalleventa">
+                    <field name="name" placeholder="Número de control" />
+                    <field name="producto" placeholder="producto"/>
+                    <field name="cantidad" placeholder="cantidad"/>
+                </group>
+            </sheet>
+		</form>
+        </field>
+		</record>
+
+        <!-- vista tipo tree del modelo puntoventa.detalleventa -->	
+		<record model="ir.ui.view" id="puntoventa_detalleventa_tree">
+			<field name="name">puntoventa.detalleventa.tree</field>
+			<field name="model">puntoventa.detalleventa</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="detalleventa" >
+						<field name="name" />
+						<field name="producto"/>
+						<field name="cantidad" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="puntoventa_detalleventa_search">
+			<field name="name">puntoventa.detalleventa.search</field>
+			<field name="model">puntoventa.detalleventa</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+					<field name="producto"/>
+					<field name="cantidad" />
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO puntoventa.detalleventa -->	
+		<record id="puntoventa_detalleventa_action" model="ir.actions.act_window">
+			<field name="name">detalleventa</field>
+			<field name="res_model">puntoventa.detalleventa</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+	<report id="kardex_id" model="puntoventa.detalleventa"
+		string="Kardex" report_type="qweb-pdf" name="puntoventa.kardex"
+		attachment_use="False"/> 
+
+</odoo>

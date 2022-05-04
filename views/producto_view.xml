@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo puntoventa.producto -->	
+		<record model="ir.ui.view" id="producto_form">
+		<field name="name">puntoventa.producto.form</field>
+		<field name="model">puntoventa.producto</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<form>
+            <sheet>
+                <group string="Datos de producto">
+                    <field name="name" placeholder="Número de control" />
+                    <field name="producto" placeholder="producto"/>
+                    <field name="categoria" placeholder="categoria"/>
+                    <field name="precio" placeholder="precio"/>	
+                    <field name="cantidad" placeholder="cantidad"/>
+                </group>
+            </sheet>
+		</form>
+        </field>
+		</record>
+
+        <!-- vista tipo tree del modelo puntoventa.producto -->	
+		<record model="ir.ui.view" id="puntoventa_producto_tree">
+			<field name="name">puntoventa.producto.tree</field>
+			<field name="model">puntoventa.producto</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="producto" >
+						<field name="name" />
+						<field name="producto" />
+						<field name="categoria"/>
+						<field name="precio" />
+						<field name="cantidad" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="puntoventa_producto_search">
+			<field name="name">puntoventa.producto.search</field>
+			<field name="model">puntoventa.producto</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+					<field name="producto" />
+					<field name="categoria"/>
+					<field name="precio" />
+					<field name="cantidad" />
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO puntoventa.producto -->	
+		<record id="puntoventa_producto_action" model="ir.actions.act_window">
+			<field name="name">producto</field>
+			<field name="res_model">puntoventa.producto</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+	<report id="kardex_id" model="puntoventa.producto"
+		string="Kardex" report_type="qweb-pdf" name="puntoventa.kardex"
+		attachment_use="False"/> 
+
+</odoo>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo puntoventa.metodopago -->	
+		<record model="ir.ui.view" id="metodopago_form">
+		<field name="name">puntoventa.metodopago.form</field>
+		<field name="model">puntoventa.metodopago</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<form>
+            <sheet>
+                <group string="Datos de metodopago">
+                    <field name="name" placeholder="Número de control" />
+                    <field name="metodopago" placeholder="metodopago"/>
+                </group>
+            </sheet>
+		</form>
+        </field>
+		</record>
+
+        <!-- vista tipo tree del modelo puntoventa.metodopago -->	
+		<record model="ir.ui.view" id="puntoventa_metodopago_tree">
+			<field name="name">puntoventa.metodopago.tree</field>
+			<field name="model">puntoventa.metodopago</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="metodopago" >
+						<field name="name" />
+						<field name="metodopago" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="puntoventa_metodopago_search">
+			<field name="name">puntoventa.metodopago.search</field>
+			<field name="model">puntoventa.metodopago</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+					<field name="metodopago" />
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO puntoventa.metodopago -->	
+		<record id="puntoventa_metodopago_action" model="ir.actions.act_window">
+			<field name="name">metodopago</field>
+			<field name="res_model">puntoventa.metodopago</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+	<report id="kardex_id" model="puntoventa.metodopago"
+		string="Kardex" report_type="qweb-pdf" name="puntoventa.kardex"
+		attachment_use="False"/> 
+
+</odoo>

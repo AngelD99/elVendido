@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+        <menuitem name="elvendido" id="puntoventa_menu" sequence="20" />
+        <menuitem name="Catalogos" id="puntoventa_catalogos_menu" parent='puntoventa_menu' />
+        <menuitem name="Categoria" action='puntoventa_categoria_action' id="puntoventa_categoria_menu" parent='puntoventa_catalogos_menu' />
+        <menuitem name="Metodo de pago" action='puntoventa_metodopago_action' id="puntoventa_metodopago_menu" parent='puntoventa_catalogos_menu' />
+        <menuitem name="producto" action='puntoventa_producto_action' id="puntoventa_producto_menu" parent='puntoventa_catalogos_menu' />
+
+
+        <menuitem name="Procesos" id="puntoventa_procesos_menu" parent='puntoventa_menu' />
+        <menuitem name="ventas" action='puntoventa_ventas_action' id="puntoventa_ventas_menu" parent='puntoventa_procesos_menu' />
+        <menuitem name="Detalle venta" action='puntoventa_detalleventa_action' id="puntoventa_detalleventa_menu" parent='puntoventa_procesos_menu' />
+    </data>
+</odoo>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo puntoventa.categoria -->	
+		<record model="ir.ui.view" id="categoria_form">
+		<field name="name">puntoventa.categoria.form</field>
+		<field name="model">puntoventa.categoria</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<form>
+            <sheet>
+                <group string="Datos de categoria">
+                    <field name="name" placeholder="Número de control" />
+                    <field name="categoria" placeholder="categoria"/>
+                </group>
+            </sheet>
+		</form>
+        </field>
+		</record>
+
+        <!-- vista tipo tree del modelo puntoventa.categoria -->	
+		<record model="ir.ui.view" id="puntoventa_categoria_tree">
+			<field name="name">puntoventa.categoria.tree</field>
+			<field name="model">puntoventa.categoria</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="categoria" >
+						<field name="name" />
+						<field name="categoria" />
+						
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="puntoventa_categoria_search">
+			<field name="name">puntoventa.categoria.search</field>
+			<field name="model">puntoventa.categoria</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+					<field name="categoria" />
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO puntoventa.categoria -->	
+		<record id="puntoventa_categoria_action" model="ir.actions.act_window">
+			<field name="name">categoria</field>
+			<field name="res_model">puntoventa.categoria</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+	<report id="kardex_id" model="puntoventa.categoria"
+		string="Kardex" report_type="qweb-pdf" name="puntoventa.kardex"
+		attachment_use="False"/> 
+
+</odoo>
