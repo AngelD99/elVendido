@@ -9,7 +9,7 @@
 
 
         <menuitem name="Procesos" id="puntoventa_procesos_menu" parent='puntoventa_menu' />
-        <menuitem name="ventas" action='puntoventa_ventas_action' id="puntoventa_ventas_menu" parent='puntoventa_procesos_menu' />
-        <menuitem name="Detalle venta" action='puntoventa_detalleventa_action' id="puntoventa_detalleventa_menu" parent='puntoventa_procesos_menu' />
+        <menuitem name="Ventas" action='puntoventa_ventas_action' id="puntoventa_ventas_menu" parent='puntoventa_procesos_menu' />
+        
     </data>
 </odoo>

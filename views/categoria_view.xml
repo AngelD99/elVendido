@@ -10,7 +10,8 @@
             <sheet>
                 <group string="Datos de categoria">
                     <field name="name" placeholder="Número de control" />
-                    <field name="categoria" placeholder="categoria"/>
+                    <field name="categoria" placeholder="Categoria"/>
+        
                 </group>
             </sheet>
 		</form>
@@ -25,8 +26,7 @@
 			<field name="arch" type="xml">
 				<tree string="categoria" >
 						<field name="name" />
-						<field name="categoria" />
-						
+						<field name="categoria"/>
 				</tree>
 			</field>
 		</record>
@@ -37,7 +37,7 @@
 			<field name="arch" type="xml">
 				<search>
 					<field name="name" />
-					<field name="categoria" />
+					<field name="categoria"/>
 				</search>
 			</field>
 		</record>
@@ -51,9 +51,5 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 
-
-	<report id="kardex_id" model="puntoventa.categoria"
-		string="Kardex" report_type="qweb-pdf" name="puntoventa.kardex"
-		attachment_use="False"/> 
 
 </odoo>

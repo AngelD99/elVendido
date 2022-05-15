@@ -9,8 +9,8 @@
 		<form>
             <sheet>
                 <group string="Datos de metodopago">
-                    <field name="name" placeholder="Número de control" />
-                    <field name="metodopago" placeholder="metodopago"/>
+                    <field name="name" placeholder="Id metodo de pago" />
+                    <field name="metodo" placeholder="metodopago"/>
                 </group>
             </sheet>
 		</form>
@@ -25,7 +25,7 @@
 			<field name="arch" type="xml">
 				<tree string="metodopago" >
 						<field name="name" />
-						<field name="metodopago" />
+						<field name="metodo" />
 				</tree>
 			</field>
 		</record>
@@ -36,7 +36,7 @@
 			<field name="arch" type="xml">
 				<search>
 					<field name="name" />
-					<field name="metodopago" />
+					<field name="metodo" />
 				</search>
 			</field>
 		</record>

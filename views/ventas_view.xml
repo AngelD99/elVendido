@@ -9,7 +9,15 @@
 		<form>
             <sheet>
                 <group string="Datos de ventas">
-                    <field name="name" placeholder="Número de control" />
+					<field name='detalleventas'>
+						<tree editable='bottom'>
+						<field name='name'/> 
+						<field name='producto'/>
+						<field name='precio' />
+						<field name='cantidad' />
+						</tree>
+					</field>
+					<field name='total'/>
                 </group>
             </sheet>
 		</form>
@@ -22,8 +30,10 @@
 			<field name="model">puntoventa.ventas</field>
 			<field name="type">tree</field>
 			<field name="arch" type="xml">
-				<tree string="ventas" >
-						<field name="name" />
+				<tree>
+				<field name='name'/>
+				<field name='detalleventas'>
+				</field>
 				</tree>
 			</field>
 		</record>
@@ -34,6 +44,7 @@
 			<field name="arch" type="xml">
 				<search>
 					<field name="name" />
+					<field name='detalleventas' />
 				</search>
 			</field>
 		</record>
@@ -47,9 +58,7 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 
-
-	<report id="kardex_id" model="puntoventa.ventas"
-		string="Kardex" report_type="qweb-pdf" name="puntoventa.kardex"
-		attachment_use="False"/> 
+		<report id="ticket_id" model="puntoventa.ventas" string="Ticket" 
+		report_type="qweb-pdf" name="puntoventa.reporteticket" attachment_use="False"/>
 
 </odoo>

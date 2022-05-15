@@ -1,7 +1,7 @@
 from odoo import models, fields
 
 class categoria(models.Model):
-    __name = 'puntoventa.categoria'
+    _name = 'puntoventa.categoria'
 
     name = fields.Char(string='IdCategoria')
     categoria = fields.Char(string='Categoria')

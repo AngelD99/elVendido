@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Custom report. -->
+<odoo>
+    <template id="reporteticket">
+        <t t-call="web.html_container">
+            <div class="header"  style="font-size:10px">
+				<strong>Ticket</strong>
+			</div>
+            <div class="page" style="font-size:10px">
+					<t t-foreach="docs" t-as="o">
+                    <p align='center'> 
+                        <h1 style='backgroundcolor:black; color:white;' 
+                        align='center'> Sistemas El vendido </h1>
+                        <h5 align='center'> www.elvendido.com </h5>
+						<h3 align='center'>Ticket de venta</h3>
+                        <p align='left'>Avenida madero. Colonia: Benito Juarez. #333</p>
+
+                        <p>Numero de ticket <t t-esc='o.name'/> </p>
+
+                        <h5>Productos</h5>
+
+                        <t t-foreach='o.detalleventa' t-as='c'>
+                            <p align='left' width='100px'> 
+                            <t align='center' t-esc='c.producto' /> 
+                            <t align='center' t-esc='c.precio' /> 
+                            <t align='center' t-esc='c.cantidad' /> 
+                            </p>
+                           
+                        </t>
+
+                        <t t-esc='o.total' /> 
+                        
+                    </p>
+					</t>
+			</div>
+
+            <div class="footer"  style="font-size:9px">
+				<strong>Ticket by Patricio, El Migue, Brayan el Chaca, El master (Zamora Magadan)</strong>
+			</div>
+        </t>
+    </template>
+</odoo>
