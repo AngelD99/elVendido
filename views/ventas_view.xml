@@ -9,9 +9,9 @@
 		<form>
             <sheet>
                 <group string="Datos de ventas">
+				<field name='name'/> 
 					<field name='detalleventas'>
 						<tree editable='bottom'>
-						<field name='name'/> 
 						<field name='producto'/>
 						<field name='precio' />
 						<field name='cantidad' />
@@ -57,8 +57,9 @@
 			<field name="res_model">puntoventa.ventas</field>
 			<field name="view_mode">tree,form</field>
 		</record>
-
-		<report id="ticket_id" model="puntoventa.ventas" string="Ticket" 
-		report_type="qweb-pdf" name="puntoventa.reporteticket" attachment_use="False"/>
+		
+		<report id="ticket_id" model="puntoventa.ventas"
+		string="Ticket" report_type="qweb-pdf" name="elvendido.ticket"
+		attachment_use="False"/> 
 
 </odoo>

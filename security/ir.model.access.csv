@@ -1,0 +1,10 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+admin_categoria_1,admin_categoria,model_puntoventa_categoria,puntoventa_admin,1,1,1,1
+admin_metodopago_1,admin_metodopago,model_puntoventa_metodopago,puntoventa_admin,1,1,1,1
+admin_producto_1,admin_producto,model_puntoventa_producto,puntoventa_admin,1,1,1,1
+admin_ventas_1,admin_ventas,model_puntoventa_ventas,puntoventa_admin,1,1,1,1
+
+empleado_categoria_1,empleado_categoria,model_puntoventa_categoria,puntoventa_empleado,1,0,0,0
+empleado_metodopago_1,empleado_metodopago,model_puntoventa_metodopago,puntoventa_empleado,1,0,0,0
+empleado_producto_1,empleado_producto,model_puntoventa_producto,puntoventa_empleado,1,1,0,0
+empleado_ventas_1,empleado_ventas,model_puntoventa_ventas,puntoventa_empleado,1,1,1,0

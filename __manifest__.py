@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Elvendido',
+    'name': 'elvendido',
     'version': '1.0',
     'category': 'ventas',
     'description': 'punto de venta',
@@ -9,11 +9,13 @@
     'website': 'http://www.itsa.edu.mx',
     'depends': ['base'],
     'data': [
+        'security/grupos.xml',
+        'security/ir.model.access.csv',
+        'reports/ticket.xml',
         'views/categoria_view.xml',
         'views/metodopago_view.xml',
         'views/producto_view.xml',
         'views/ventas_view.xml',
-        'reports/ticket.xml',
         'views/menu_view.xml',        
     ],
     'installable': True,

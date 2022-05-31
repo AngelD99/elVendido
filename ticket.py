@@ -7,7 +7,7 @@ class kardex(models.AbstractModel):
     def render_html(self, data=None):
 
         report_obj = self.env['report']
-        report = report_obj._get_report_from_name('ticket')
+        report = report_obj._get_report_from_name('elvendido.ticket')
 
         docargs = {
             'doc_ids': self._ids,
@@ -15,4 +15,4 @@ class kardex(models.AbstractModel):
             'docs': self.env[report.model].browse(self._ids),
         }
         
-        return report_obj.render('ticket', docargs)
+        return report_obj.render('puntoventa.ticket', docargs)

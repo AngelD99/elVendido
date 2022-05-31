@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import models, fields,http
 
 class producto(models.Model):
     _name = 'puntoventa.producto'
@@ -13,3 +13,5 @@ class producto(models.Model):
     _sql_constraints = [
         ('unique_categoria', 'unique (name)', 'La producto ya existe!')
     ]
+
+    

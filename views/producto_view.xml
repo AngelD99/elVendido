@@ -59,9 +59,4 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 
-
-	<report id="kardex_id" model="puntoventa.producto"
-		string="Kardex" report_type="qweb-pdf" name="puntoventa.kardex"
-		attachment_use="False"/> 
-
 </odoo>

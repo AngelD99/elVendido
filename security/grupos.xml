@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="vendido_id" model="ir.module.category">
+            <field name="name">Modulo de ventas</field>
+        </record>
+        <record id="puntoventa_admin" model="res.groups">
+            <field name="name">Gerente</field>
+            <field name="category_id" ref="vendido_id"/>
+        </record>
+        <record id="puntoventa_empleado" model="res.groups">
+            <field name="name">empleado</field>
+            <field name="category_id" ref="vendido_id"/>
+        </record>
+    </data>
+</odoo>
